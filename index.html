@@ -142,7 +142,6 @@ footer{
 <div id="cover">
   <div class="small">دعوة زفاف</div>
   <h3>عبد المجيد & آلاء</h3>
-  <div class="guest" id="coverGuest"></div>
   <button class="btn solid" id="openBtn">افتح الدعوة ♪</button>
 </div>
 
@@ -158,7 +157,7 @@ footer{
   <div class="rule"></div>
   <div class="date">السبت · ٨ مايو ٢٠٢٧</div>
   <div class="place">التاسعة مساءً · قاعة الماسة للحفلات</div>
-  <div class="guest" id="guest"></div>
+  <div class="guest">دعوة خاصة</div>
 </section>
 
 <section class="soft reveal">
@@ -201,8 +200,6 @@ const $ = id => document.getElementById(id);
 try{
   const g = (new URLSearchParams(location.search).get("guest") || "").trim().slice(0,40);
   if(g){
-    $("guest").textContent = "دعوة خاصة لـ " + g;
-    $("coverGuest").textContent = "إلى " + g;
     $("name").value = g;
   }
 }catch(e){}
